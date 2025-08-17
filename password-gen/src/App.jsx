@@ -80,7 +80,9 @@ return (
   <div className="password-card">
     <h1>Password Generator</h1>
     <input type="text" className="password-display" value={password} readOnly />
-    <button className="copy-btn">Copy</button>
+    <button className="copy-btn" onClick={() => {
+      window.navigator.clipboard.writeText(password);
+    }}>Copy</button>
 
     <div className="controls">
       <div className="control-item">
